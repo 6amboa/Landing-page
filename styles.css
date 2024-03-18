@@ -1,0 +1,270 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+@keyframes rainbowAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header, footer {
+    background: linear-gradient(45deg, red, yellow, green,  blue);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    animation: rainbowAnimation 12s linear infinite;
+    background-size: 1400% 1400%;
+}
+
+
+header p{
+    font-size: 56px;
+    margin: 0;
+}
+
+footer p{
+    font-size: 20px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background: linear-gradient(45deg, red, yellow, green,  blue);
+    animation: rainbowAnimation 12s linear infinite;
+    background-size: 1400% 1400%;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 100px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 56px;
+}
+
+section.content {
+    padding: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    border-radius: 50%;
+    max-width: 150px;
+    height: auto;
+    margin: 10px auto;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.team-member p {
+    font-weight: bold;
+    color: #777;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label, form textarea, form input[type="text"], form input[type="email"] {
+    display: block;
+    margin: 10px 0;
+}
+
+form textarea {
+    width: 100%;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+header h1 {
+    animation: pop 0.8s ease-in-out infinite;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product {
+    text-align: center;
+    margin: 0 20px;
+    opacity: 0; 
+    animation: fadeIn 5s forwards; 
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; 
+    }
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: block;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 100px;; /* Añadimos un margen de 20px alrededor del contenedor */
+    box-shadow: 0 0 25px rgba(0,0,0,0.1); /* Añadimos una sombra */
+}
+
+.section-with-image {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Ajusta el espacio entre la imagen y el título/párrafo */
+}
+
+.section-with-image img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio manteniendo sus proporciones */
+}
+
+
+.text-content {
+    margin: 20px; /* Ajusta el espacio alrededor del contenedor de texto */
+    margin-top: 10px; /* Margen superior */
+    margin-right: 450px; /* Margen derecho */
+    margin-bottom: 10px; /* Margen inferior */
+    margin-left: 20px; /* Margen izquierdo */
+    text-align: left;
+    font-size: 25px; 
+}
+.text-content-izquierdo {
+    margin: 20px; /* Ajusta el espacio alrededor del contenedor de texto */
+    margin-top: 10px; /* Margen superior */
+    margin-right: 20px; /* Margen derecho */
+    margin-bottom: 10px; /* Margen inferior */
+    margin-left: 350px; /* Margen izquierdo */
+    text-align: left;
+    font-size: 25px;
+}
+
+.section-with-image-izquierda {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px; /* Ajusta el espacio entre la imagen y el título/párrafo */
+}
+
+.section-with-image-izquierda img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio manteniendo sus proporciones */
+}
+
+.container p {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: pop 3.5s forwards;
+}
+
+@keyframes pop {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h1 {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideInLeft 3s forwards;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+h2 {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideInRight 3s forwards;
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Alinea los productos desde la izquierda hasta la derecha */
+}
+
+.venta {
+    flex: 0 0 calc(10% - 10px); /* Establece el ancho de cada producto */
+    text-align: center; /* Centra el contenido dentro de cada producto */
+    border: 2px solid #ccc; /* Añade un borde para mayor separación visual */
+    margin: 15px;
+}
+
+.venta img {
+    width: 350px; /* Cambia el valor según el tamaño que desees */
+    height: auto; /* Esto mantiene la proporción original */
+}
+
+.venta:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.nav-item:hover {
+    transform: scale(5.1);
+    transition: transform 0.3s ease;
+}
+
